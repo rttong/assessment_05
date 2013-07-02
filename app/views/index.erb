@@ -1,0 +1,14 @@
+<div class="container">
+
+  <% if is_logged_in? %>
+
+    <h1>Here is a list of current users:</h1>
+    <% @user.each do |user| %>
+      <p><%= user.id %>. <%= user.name %></p>
+    <% end %>
+
+ <% else %>
+   <h1>Welcome! Please sign up or login.</h1>
+ <% end %>
+
+</div>
